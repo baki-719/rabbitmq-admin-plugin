@@ -5,18 +5,19 @@
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Rabbitmq-admin</name>
+    <name>Rabbitmq-Admin</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+    <vendor email="hgs6424@naver.com.com">baki</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
-  ]]></description>
+    <description>
+        <![CDATA[
+            <p> rabbitmq admin </p>
+        ]]>
+    </description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -25,6 +26,13 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-
+        <toolWindow factoryClass="com.baki.rabbitmqadmin.RabbitMqAdminWindowFactory" id="RabbitMQ Admin" anchor="right"
+        icon="AllIcons.Providers.Apache" />
     </extensions>
+    <actions>
+        <action id="RabbitMqAdminOpenButtonAction2" class="com.baki.rabbitmqadmin.RabbitMqAdminOpenButtonAction"
+                text="RabbitMqAdminOpenButtonAction2" description="RabbitMqAdminOpenButtonAction2">
+            <add-to-group group-id="RightToolbarSideGroup" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
