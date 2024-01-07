@@ -1,4 +1,4 @@
-package com.baki.rabbitmqadmin
+package com.baki.rabbitmqadmin.ui
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent

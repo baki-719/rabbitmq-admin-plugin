@@ -26,12 +26,13 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.baki.rabbitmqadmin.RabbitMqAdminWindowFactory" id="RabbitMQ Admin" anchor="right"
-        icon="AllIcons.Providers.Apache" />
+        <appStarter implementation="com.baki.rabbitmqadmin.ui.RabbitMqAdminStarter"/>
+        <toolWindow factoryClass="com.baki.rabbitmqadmin.ui.RabbitMqAdminWindowFactory" id="RabbitMQ Admin" anchor="right"
+                    icon="AllIcons.Providers.Apache" />
     </extensions>
     <actions>
-        <action id="RabbitMqAdminOpenButtonAction2" class="com.baki.rabbitmqadmin.RabbitMqAdminOpenButtonAction"
-                text="RabbitMqAdminOpenButtonAction2" description="RabbitMqAdminOpenButtonAction2">
+        <action id="RabbitMqAdminOpenButtonAction" class="com.baki.rabbitmqadmin.ui.RabbitMqAdminOpenButtonAction"
+                text="RabbitMqAdminOpenButtonAction" description="RabbitMqAdminOpenButtonAction">
             <add-to-group group-id="RightToolbarSideGroup" anchor="first"/>
         </action>
     </actions>
